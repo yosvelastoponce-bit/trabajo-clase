@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,6 @@
         <br>
         <a href="{{ route('bienvenidos') }}">Bienvenidos</a>
         <br>
-        <a href="{{ route('estudiantes') }}">Estudiantes</a>
+        <a href="{{ route('estudiantes.index') }}">Estudiantes</a>
     </body>
 </html>

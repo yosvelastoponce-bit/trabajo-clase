@@ -4,17 +4,19 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use App\Models\Estudiante;
 
+use App\Http\Controllers\Estudiantes\EstudiantesController;
+
 Route::get('/', function () {
     
-    $estudiante = new Estudiante();
+    /*$estudiante = new Estudiante();
     $estudiante->nombres = 'Jose';
     $estudiante->pri_ape = 'Sanchez';
     $estudiante->seg_ape = 'Carrion';
     $estudiante->save();
 
-    return $estudiante;
+    return $estudiante;*/
     
-    //return view('welcome');
+    return view('welcome');
 });
 
 Route::get('/saludos', function() {
@@ -25,6 +27,8 @@ Route::get('/bienvenidos', function() {
     return view('bienvenidos');
 })->name('bienvenidos');
 
-Route::get('/estudiantes', function() {
+/*Route::get('/estudiantes', function() {
     return View::make('estudiantes');
-})->name('estudiantes');
+})->name('estudiantes');*/
+
+Route::get('/estudiantes/index', [EstudiantesController::class, 'index'])->name('estudiantes.index');
