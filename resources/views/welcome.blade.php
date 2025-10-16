@@ -6,10 +6,16 @@
         <title>Document</title>
     </head>
     <body>
-        <a href="{{ route('saluditos') }}">Saludos</a>
+        <h1>
+            <a href="{{ route('saluditos') }}">Saludos</a>
+        </h1>
         <br>
-        <a href="{{ route('bienvenidos') }}">Bienvenidos</a>
+        <h1>
+            <a href="{{ route('bienvenidos') }}">Bienvenidos</a>
+        </h1>
         <br>
-        <a href="{{ route('estudiantes.index') }}">Estudiantes</a>
+        <h1>
+            <a href="{{ route('estudiantes.index') }}">Estudiantes</a>
+        </h1>
     </body>
 </html>

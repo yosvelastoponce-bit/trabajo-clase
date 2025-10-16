@@ -32,3 +32,7 @@ Route::get('/bienvenidos', function() {
 })->name('estudiantes');*/
 
 Route::get('/estudiantes/index', [EstudiantesController::class, 'index'])->name('estudiantes.index');
+Route::get('/estudiantes/create', [EstudiantesController::class, 'create'])->name('estudiantes.create');
+Route::post('/estudiantes/store', [EstudiantesController::class, 'store'])->name('estudiantes.store');
+Route::get('/estudiantes/edit/{id}', [EstudiantesController::class, 'edit'])->name('estudiantes.edit');
+Route::post('/estudiantes/update', [EstudiantesController::class, 'update'])->name('estudiantes.update');
