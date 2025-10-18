@@ -35,8 +35,24 @@ class EstudiantesController extends Controller
         return View::make('estudiantes.edit', compact('estudiante'));
     }
 
-    public function update(Request $request) {
+    public function update(Request $request, Estudiante $estudiante) {
 
-        return $request->all();
+        $estudiante->update($request->all());
+
+        return Redirect::to('/estudiantes/index');
+    }
+
+    public function delete($id) {
+
+        $estudiante = Estudiante::find($id);
+
+        return View::make('estudiantes.delete', compact('estudiante'));
+    }
+
+    public function destroy(Estudiante $estudiante) {
+
+        $estudiante->delete();
+
+        return Redirect::to('/estudiantes/index');
     }
 }

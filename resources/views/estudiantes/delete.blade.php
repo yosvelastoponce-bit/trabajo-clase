@@ -8,11 +8,11 @@
     </head>
     <body>
         <h1 class="text-3xl font-bold underline">
-            Estudiantes Edit
+            Estudiantes Delete
         </h1>
         <br>
 
-        <form action="{{ route('estudiantes.update', $estudiante) }}" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form action="{{ route('estudiantes.destroy', $estudiante) }}" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         
             @csrf
 
@@ -52,8 +52,8 @@
             </div>
 
             <div class="flex items-center justify-between">
-                <button type="submit" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                    Guardar
+                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Eliminar
                 </button>
             </div>
         </form>
