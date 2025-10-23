@@ -10,4 +10,9 @@ class Estudiante extends Model
     use SoftDeletes;
     
     protected $guarded = [];
+
+    public function comentarios() {
+
+        return $this->hasMany(Comentario::class);
+    }
 }

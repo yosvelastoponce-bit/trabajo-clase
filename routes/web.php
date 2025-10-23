@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
-use App\Models\Estudiante;
+use App\Models\{Comentario,Estudiante};
 
 use App\Http\Controllers\Estudiantes\EstudiantesController;
+use App\Http\Controllers\Comentarios\ComentariosController;
+
 
 Route::get('/', function () {
     
@@ -15,7 +17,37 @@ Route::get('/', function () {
     $estudiante->save();
 
     return $estudiante;*/
-    
+
+    /*$estudiante = Estudiante::create([
+        'codigo' => '1002',
+        'nombres' => 'Edickzon',
+        'pri_ape' => 'Veramendi',
+        'seg_ape' => 'Malpartida',
+        'dni'   => '67484937',
+    ]);
+
+    $estudiante->comentarios()->create([
+        'descripcion' => 'Ud. ha cumplido con su trabajo',
+        'curso' => 'Ing. de Sofware con Met. Agiles'
+    ]);
+
+    return $estudiante;*/
+
+    /*$estudiante = Estudiante::find(3);
+
+    $estudiante->comentarios()->create([
+        'descripcion' => 'Ud. tambien esta fino en Java.',
+        'curso' => 'Java Developer'
+    ]);
+
+    return $estudiante;*/
+
+    //$estudiante = Estudiante::get();
+    //dd($estudiante);
+
+    //$comentario = Comentario::where('estudiante_id', 3)->get();
+    //return $comentario;
+
     return view('welcome');
 });
 
@@ -38,3 +70,6 @@ Route::get('/estudiantes/edit/{id}', [EstudiantesController::class, 'edit'])->na
 Route::post('/estudiantes/update/{estudiante}', [EstudiantesController::class, 'update'])->name('estudiantes.update');
 Route::get('/estudiantes/delete/{id}', [EstudiantesController::class, 'delete'])->name('estudiantes.delete');
 Route::post('/estudiantes/destroy/{estudiante}', [EstudiantesController::class, 'destroy'])->name('estudiantes.destroy');
+
+
+Route::get('/comentarios/index', [ComentariosController::class, 'index'])->name('comentarios.index');

@@ -17,5 +17,10 @@
         <h1>
             <a href="{{ route('estudiantes.index') }}">Estudiantes</a>
         </h1>
+
+        <br>
+        <h1>
+            <a href="{{ route('comentarios.index') }}">Comentarios</a>
+        </h1>
     </body>
 </html>
