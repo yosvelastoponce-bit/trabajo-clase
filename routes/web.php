@@ -73,3 +73,7 @@ Route::post('/estudiantes/destroy/{estudiante}', [EstudiantesController::class, 
 
 
 Route::get('/comentarios/index', [ComentariosController::class, 'index'])->name('comentarios.index');
+Route::get('/comentarios/create', [ComentariosController::class, 'create'])->name('comentarios.create');
+Route::post('/comentarios/store', [ComentariosController::class, 'store'])->name('comentarios.store');
+Route::get('/comentarios/edit/{id}', [ComentariosController::class, 'edit'])->name('comentarios.edit');
+Route::post('/comentarios/update/{comentario}', [ComentariosController::class, 'update'])->name('comentarios.update');
