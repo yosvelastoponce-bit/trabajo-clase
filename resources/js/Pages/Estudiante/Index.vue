@@ -22,14 +22,21 @@ defineProps({
       
       Estudiantes
       <div class="py-12">
-  <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div class="py-3">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div class="py-3">
+            
+           <Link :href="route('estudiantes.create')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
       
-     <Link :href="route('estudiantes.create')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-
-      Agregar
-    </Link>
-    </div>
+            Agregar
+          </Link>
+          <!-- <Link :href="route('estudiantes.reporte.pdf')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+      
+            PDF
+          </Link> -->
+          <a href="/estudiantes/reporte/pdf" 
+          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          PDF</a>
+          </div>
 
   <table class="overflow-x-auto">
   <thead class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
